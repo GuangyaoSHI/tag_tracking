@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+    
+    <node name="reference_point_node" pkg="mavros_test" type="reference_point.py" output="screen" />
+    <node name="tag_pose_body_node" pkg="mavros_test" type="mavros_test_tracking_node" output="screen" />
+    <node name="pid2px4_node" pkg="mavros_test" type="pid2px4.py" output="screen" />
+    <include file="$(find mavros_test)/launch/pid_controller.launch"/> 
+
+</launch>
+
